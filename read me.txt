@@ -1,0 +1,9 @@
+For tabular time-series, SMOTE IS NOT suitable
+
+SMOTE works on independent tabular rows.
+
+But you have ordered sequences (TCN)
+→ SMOTE would destroy the temporal structure.
+→ You cannot oversample individual rows without breaking sequences.
+
+So we need sequence-aware augmentation + proper sampling.
